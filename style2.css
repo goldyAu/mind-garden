@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#bg-video {
+    position: fixed; /* Ensures the video stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire viewport */
+    z-index: -1; /* Keeps the video behind all content */
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: auto; /* Allow the body to grow based on content */
+    overflow-x: hidden; /* Prevent horizontal scrolling only */
+    font-family: "Roboto", sans-serif;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #178013;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #145d0e;
+}
+
+header.page-header {
+    text-align: center;
+    margin: 60px 0 20px; /* Adjusted for fixed nav-links */
+   
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+header.page-header h1 {
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    background: rgba(154, 209, 166, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px); /* Lift the box upward slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+    background-color: #046104; /* Change background color to a soft green */
+}
+
+.box img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.box:hover img {
+    transform: scale(1.05); /* Slightly zoom in the image */
+}
+
+
+.box h1 {
+    font-size: 30px;
+    margin: 15px 0 10px;
+    text-align: center;
+}
+
+.box p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+footer.page-footer {
+    width: 100%; /* Ensure full width */
+    
+    padding: 15px;
+    font-size: 18px; /* Slightly larger font */
+    color: #fff; /* White font */
+    text-align: center;
+}
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    header.page-header h1 {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .box {
+        padding: 15px;
+    }
+
+    .box h1 {
+        font-size: 20px;
+    }
+
+    .box p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header.page-header h1 {
+        font-size: 24px;
+    }
+
+    .box img {
+        max-width: 100%;
+    }
+
+    .box h1 {
+        font-size: 18px;
+    }
+
+    .box p {
+        font-size: 14px;
+    }
+}

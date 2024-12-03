@@ -1,0 +1,107 @@
+/* Background Video */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire viewport */
+  z-index: -1; /* Place the video behind other elements */
+}
+
+/* Adjust body to ensure content flows correctly */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2e7d32; /* Dark green text */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full viewport height */
+  background: transparent; /* Ensure the video shows through */
+}
+  
+  /* Navigation Bar */
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #178013;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #145d0e;
+}
+  
+  /* Header Styles */
+  header {
+    background-color: rgba(rgb161, 212, 157, 0.8); /* Dark green */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  /* Main Container Styles */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: white;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Image Styles */
+  .card-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+    object-fit: contain;
+  }
+  
+  /* Hover Effect */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(46, 125, 50, 0.3);
+  }
+  
+  /* Footer Styles */
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(rgb161, 212, 157, 0.8);
+    color: white;
+  }
+  

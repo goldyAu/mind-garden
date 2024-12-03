@@ -1,0 +1,201 @@
+/* Universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Video background */
+#bg-video {
+    position: fixed; /* Ensures the video stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire viewport */
+    z-index: -1; /* Keeps the video behind all content */
+}
+
+/* General body settings */
+body {
+    margin: 0;
+    padding: 0;
+    height: auto; /* Allow the body to grow based on content */
+    overflow-x: hidden; /* Prevent horizontal scrolling only */
+    font-family: "Roboto", sans-serif;
+}
+
+/* Header section */
+.header {
+    position: relative;
+    min-height: 100vh; /* Ensure the header covers the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: transparent; /* Match the background or set as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.back-button {
+    font-size: 18px;
+    color: #fff; /* Text color */
+    background: #2c8437; /* Green background */
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #62bd88; /* Lighter green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Content section */
+.defn {
+    text-align: center;
+    margin: 40px auto; /* Center the text with spacing */
+}
+
+.defn h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff; /* Green header */
+    margin-bottom: 20px;
+}
+
+.defn p {
+    font-size: 30px;
+    color: #ffffff; /* Darker text for readability */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #62bd88; /* Green background matching the theme */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Button font size */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+.btn:hover {
+    background-color: #2c8437; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Responsive row styles */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between the boxes */
+    flex-wrap: wrap; /* Ensure responsiveness */
+    margin-bottom: 0; /* Ensure there's no extra space below the boxes */
+}
+
+/* About columns */
+.about-col {
+    background-color: rgba(188, 233, 188, 0.8); /* Lime with 80% opacity */
+    border: 2px solid #62bd88; /* Green border matching the theme */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px;
+    width: 600px; /* Adjusted width */
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Ensure vertical stacking */
+    gap: 20px; /* Add spacing between sections */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+
+.about-col h3 {
+    font-size: 50px;
+    color: #2c8437; /* Matches theme */
+    margin-bottom: 10px;
+}
+
+.about-col p {
+    font-size: 30px;
+    color: #555; /* Medium-dark gray for readability */
+    line-height: 1.8; /* Increase line height for better spacing */
+}
+
+.about-col:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+    border-color: #2c8437; /* Change the border color on hover */
+}
+
+/* Footer styles */
+.footer {
+    position: relative;
+    color: white; /* Text color */
+    text-align: center; /* Center-align text */
+    padding: 10px 0; /* Spacing above and below text */
+    
+    width: 100%; /* Stretch the footer to full width */
+    font-size: 18px; /* Font size for the text */
+    margin-top: 0; /* Remove any space above the footer */
+}
+
+/* Media Queries for responsiveness */
+@media(max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .about-col {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+}
+/* Media queries */
+@media (max-width: 700px) {
+    .defn h1 {
+        font-size: 28px;
+    }
+
+    .defn p {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .about-col {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .back-button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+}

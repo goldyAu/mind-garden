@@ -1,0 +1,224 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+    .roboto-light {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+      
+      .roboto-regular {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .roboto-medium {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      
+      .roboto-light-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+      }
+      
+      .roboto-regular-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+      
+      .roboto-medium-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+      }
+      
+    
+}
+.header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /* Ensures content stays within bounds */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the header area */
+    z-index: -1; /* Places the video behind the text and navigation */
+}
+
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2; /* Keeps the logo above all other elements */
+}
+nav img {
+    width: 200px; /* Logo width */
+    position: fixed; /* Keeps it fixed in place during scroll */
+    top: 0; /* Aligns the image to the top */
+    left: 2%; /* Adjusts horizontal positioning (optional) */
+    z-index: 1000; /* Ensures it stays above other elements */
+    margin-right: 0; /* Removes margin that was pushing it out of alignment */
+    z-index: 3; /* Ensures navigation appears above the video */
+}
+
+
+
+.nav-links{
+     flex: 1;
+     text-align: right;
+
+}
+
+.nav-links ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    
+}
+.nav-links ul li a{
+    color:  rgba(255, 255, 255, 0.67);
+    text-decoration: solid;
+    font-size: 20px;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+     
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; /* Ensures text appears above the video */
+    color: #fff;
+}
+
+.text-box h1{
+    font-size: 75px;
+
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 30px;
+    line-height: 45px;
+    color: #fff;
+
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+     color: #fff;
+     border: 1px solid #fff;
+     padding: 12px 34px;
+     font-size: 13px;
+     background: transparent;
+     position: relative;
+     cursor: pointer;
+
+    }
+   
+
+.hero-btn:hover{
+        border: 1px solid #24884d;
+        background: #24884d;
+        transition: 1s;
+
+    }
+body{
+    overflow-x: hidden;
+   
+}
+
+nav .fa{
+    display: none;
+
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-wrap: wrap; /* Allow links to wrap for smaller screens */
+      gap: 10px;
+    }
+  
+    .nav-link {
+      font-size: 16px;
+      padding: 6px 10px;
+    }
+  
+    header h1 {
+      font-size: 1.8rem; /* Adjust header size */
+    }
+  
+    .container {
+      grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
+    }
+  
+    .card {
+      width: 100%; /* Full width for mobile screens */
+      max-width: none; /* Remove the max width for fluidity */
+    }
+  
+    .card-image {
+      width: 100px; /* Scale down the image */
+      height: 100px;
+    }
+  }
+
+.footer {
+    color: white; /* Text color */
+    text-align: center; /* Center-align text */
+    padding: 10px 0; /* Spacing above and below text */ 
+    position: fixed; /* Make it fixed at the bottom */
+    bottom: 0; /* Position at the bottom */
+    width: 100%; /* Stretch the footer to full width */
+    font-size: 18px; /* Font size for the text */
+    font-family: "Roboto", sans-serif; /* Ensure font matches the site theme */
+    z-index: 1000; /* Keep it above other elements */
+}
+
+
+
+
+
+
+
+
+
+

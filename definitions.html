@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>MindGarden</title>
+    <link rel="stylesheet" href="styledefn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+   
+
+    <section class="header">
+        <!-- Add the video element -->
+        <video autoplay muted loop class="background-video">
+            <source src="video/Rainforest animation.mp4" type="video/mp4">
+            
+        </video>
+        <nav>
+            <a href="index.html"><img src="images/logofinal.png" ></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="definitions.html">DEFINITIONS</a></li>
+                    <li><a href="about page.html">ABOUT US</a></li>
+                        
+                           
+                           
+                </ul>
+            </div>
+            <i class="fa fa-bars"onclick="showMenu()"></i>
+        </nav>
+        <div class="defn">
+            <h1>Mental Health</h1>
+            <p>
+                Mental health is crucial to our well-being, influencing how we think, feel, and connect. <br>
+                Conditions like anxiety and depression often arise from genetic, life, and environmental factors, causing distress and daily challenges.<br>
+                Reducing stigma, fostering open dialogue, building support networks, and seeking timely help can promote understanding and empower individuals to navigate their mental health effectively.
+            </p>
+            </div>
+            <div class="row">
+                <a href="depressions.html" class="about-link">
+                    <div class="about-col">
+                        <h3>Depression</h3>
+                        <p>
+                            Depression is a serious mental health condition that affects emotions, thoughts, behaviors, and outlook. <br>
+                            It involves persistent feelings of sadness or emptiness, lasting weeks or longer, and differs from normal mood changes.<br>
+                            Often chronic, it can improve but frequently recurs, impacting people across all demographics.
+                        </p>
+                    </div>
+                </a>
+                <a href="anxiety.html" class="about-link">
+                    <div class="about-col">
+                        <h3>Anxiety</h3>
+                        <p>
+                            Anxiety is a natural response to stress, marked by feelings of worry, nervousness, or fear about uncertain outcomes.<br>
+                            While normal in moderation, it can become overwhelming and disruptive when persistent.<br>
+                            Managing anxiety often involves stress reduction, coping strategies, and seeking support if needed.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            
+        
+
+        </section>
+
+
+        <footer class="footer">
+            <p>&copy; 2024 MindGarden. Be Well!</p>
+        </footer>
+        
+    
+<script>
+
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>

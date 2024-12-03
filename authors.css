@@ -1,0 +1,305 @@
+/* General Reset */
+* {
+       margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+    
+    /* Full-page video background */
+    .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure video covers the area properly */
+        z-index: -1; /* Sends video behind all content */
+}
+    
+    body {
+        font-family: "Roboto", sans-serif;
+        color: #fff;
+        line-height: 1.6;
+        text-align: center;
+        margin: 0;
+        min-height: 100vh; /* Ensure full page height */
+        overflow-y: auto; /* Allow vertical scrolling */
+    }
+    
+    /* Header Section */
+    .header {
+        min-height: 100vh; /* Full height header */
+        width: 100%;
+        position: relative;
+    }
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+ z-index: 2;
+}
+nav img {
+    width: 200px; /* Logo width */
+    position: fixed; /* Keeps it fixed in place during scroll */
+    top: 0; /* Aligns the image to the top */
+    left: 2%; /* Adjusts horizontal positioning (optional) */
+    z-index: 1000; /* Ensures it stays above other elements */
+    margin-right: 0; /* Removes margin that was pushing it out of alignment */
+    z-index: 3;
+}
+
+
+
+.nav-links{
+     flex: 1;
+     text-align: right;
+
+}
+
+.nav-links ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    
+}
+.nav-links ul li a{
+    color:  rgba(255, 255, 255, 0.67);
+    text-decoration: solid;
+    font-size: 20px;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+     
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+
+
+
+.logo-link {
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Top-right logo */
+.logo-link.top-right {
+    top: 20px; /* Adjust vertical position */
+    right: 20px; /* Adjust horizontal position */
+}
+
+/* Top-left logo */
+.logo-link.top-left {
+    top: 20px; /* Adjust vertical position */
+    left: 20px; /* Adjust horizontal position */
+}
+
+.logo {
+    width: 250px; /* Increased size for better visibility */
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Hover effect for both logos */
+.logo-link:hover img {
+    transform: scale(1.1); /* Slight zoom effect */
+    opacity: 0.9; /* Subtle opacity change */
+}
+
+
+
+
+.team-section {
+    padding: 30px 20px;
+    /* Removed the black background */
+    background: none; /* No background color */
+}
+
+
+.text-container {
+    margin-bottom: 0px;
+}
+
+.text-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px; /* Reduce spacing below the h1 */
+}
+
+.text-container p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 5px; /* Reduce spacing above the p */
+}
+
+
+.authors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Adjusted the gap to make it more spacious */
+}
+
+.author-box {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 250px; /* Increased width for larger boxes */
+    padding: 30px; /* Increased padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.author-box img {
+    width: 100%; /* Image takes up full width of the box */
+    height: 250px; /* Increased height for larger image */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.author-box h3 {
+    font-size: 1.5rem; /* Increased font size */
+    margin-top: 15px; /* Increased margin for more spacing */
+}
+
+/* Hover Effect */
+.author-box:hover {
+    transform: translateY(-15px); /* Larger translate effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Larger shadow */
+    background-color: rgba(255, 255, 255, 0.9); /* Slight color change */
+}
+
+.author-box:hover h3 {
+    color: #24884d; /* Change text color on hover */
+}
+
+.author-box:hover img {
+    opacity: 0.9; /* Slight opacity change for image on hover */
+}
+
+.stress-relief {
+    margin: 50px auto; /* Centers the section */
+    text-align: center; /* Centers the text and button */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Adds a light background for readability */
+    border-radius: 15px; /* Rounded corners for a smooth look */
+    width: 80%; /* Adjusts the width of the box */
+    max-width: 600px; /* Prevents it from being too wide on large screens */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    margin-top: 30px; /* Spacing from other content */
+}
+
+.text-box p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333; /* Dark text for readability */
+}
+
+/* Remove the default link styles */
+.fun-link {
+    text-decoration: none; /* Removes underline from link */
+    display: inline-block; /* Makes the link behave like a button */
+}
+
+.fun-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #24884d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fun-button:hover {
+    background-color: #1c6a3c;
+    transform: scale(1.1);
+}
+
+.footer {
+    color: white; /* Text color */
+    text-align: center; /* Center-align text */
+    padding: 10px 0; /* Spacing above and below text */ 
+    position: fixed; /* Make it fixed at the bottom */
+    bottom: 0; /* Position at the bottom */
+    width: 100%; /* Stretch the footer to full width */
+    font-size: 18px; /* Font size for the text */
+    font-family: "Roboto", sans-serif; /* Ensure font matches the site theme */
+    z-index: 1000; /* Keep it above other elements */
+}
+/* ------------------------- */
+/* Mobile-specific styles */
+/* ------------------------- */
+@media screen and (max-width: 768px) {
+    /* Adjust Navbar */
+    .fa-bars, .fa-times {
+        display: block;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 0;
+        right: -200px;
+        background: rgba(0, 0, 0, 0.8);
+        width: 200px;
+        height: 100vh;
+        transition: 0.5s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links ul li {
+        margin: 0;
+    }
+
+    /* Center Logo */
+    nav img {
+        position: static;
+        margin: 0 auto;
+    }
+
+    /* Team Section Adjustments */
+    .authors-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .author-box {
+        width: 90%;
+        max-width: none;
+    }
+
+    /* Stress Relief Section Adjustments */
+    .stress-relief {
+        width: 90%;
+    }
+
+    /* Footer Adjustments */
+    .footer {
+        font-size: 14px;
+    }
+}

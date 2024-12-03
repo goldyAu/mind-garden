@@ -1,0 +1,284 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+    .roboto-light {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+      
+      .roboto-regular {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .roboto-medium {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      
+      .roboto-light-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+      }
+      
+      .roboto-regular-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+      
+      .roboto-medium-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+      }
+      
+    
+}
+.header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /* Ensures content stays within bounds */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the header area */
+    z-index: -1; /* Places the video behind the text and navigation */
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2; /* Keeps the logo above all other elements */
+}
+nav img {
+    width: 200px; /* Logo width */
+    position: fixed; /* Keeps it fixed in place during scroll */
+    top: 0; /* Aligns the image to the top */
+    left: 2%; /* Adjusts horizontal positioning (optional) */
+    z-index: 1000; /* Ensures it stays above other elements */
+    margin-right: 0; /* Removes margin that was pushing it out of alignment */
+    z-index: 3; /* Ensures navigation appears above the video */
+}
+
+
+.nav-links{
+     flex: 1;
+     text-align: right;
+
+}
+
+.nav-links ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    
+}
+.nav-links ul li a{
+    color:  rgba(255, 255, 255, 0.67);
+    text-decoration: solid;
+    font-size: 20px;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+     
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+.defn {
+    background-color: rgba(98, 189, 136, 0.1); /* Subtle green background */
+    border: 2px solid #62bd88; /* Border matching the site's theme */
+    border-radius: 15px; /* Rounded corners */
+    padding: 30px 40px; /* Adjusted padding for a balanced layout */
+    width: 100%; /* Full width for the container */
+    max-width: 1400px; /* Increased maximum width */
+    margin: 40px auto; /* Center the box with spacing */
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly larger shadow for depth */
+    z-index: 1;
+}
+
+
+.defn h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff; /* Green header */
+    margin-bottom: 20px;
+    
+}
+
+.defn p {
+    font-size: 30px;
+    color: #ffffff; /* Darker text for readability */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.defn:hover {
+    background-color: rgba(98, 189, 136, 0.3); /* Slightly darker green */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow depth */
+    transform: translateY(-5px); /* Slightly lift the element */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.defn h1:hover {
+    color: #62bd88; /* Change header color on hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a text shadow */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+}
+
+.defn p:hover {
+    color: #000000; /* Slightly darker text for emphasis */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between the boxes */
+    flex-wrap: wrap; /* Ensure responsiveness */
+    z-index: 1;
+}
+
+.about-col {
+    background-color: #ffffff; /* White background for contrast */
+    border: 2px solid #62bd88; /* Green border matching the theme */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px;
+    width: 500px; /* Uniform width for both boxes */
+    height: 350px; /* Fixed height for consistent box size */
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Ensure vertical stacking */
+    justify-content: space-between; /* Space out content evenly */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1;
+}
+
+.about-col h3 {
+    font-size: 28px; /* Increased font size for headings */
+    color: #2c8437; /* Matches theme */
+    margin-bottom: 15px;
+}
+
+.about-col p {
+    font-size: 18px; /* Larger font size for content */
+    color: #555; /* Medium-dark gray for readability */
+    line-height: 1.8; /* Increase line height for better spacing */
+    height: 300px; /* Fixed height for consistent paragraph length */
+    overflow: hidden; /* Prevent overflow of text */
+    margin: 0;
+}
+
+.about-link:hover .about-col {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Add a stronger shadow on hover */
+    background: rgba(133, 228, 183, 0.8);
+}
+
+
+.about-link {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit the text color from the content */
+    display: inline-block; /* Ensure the entire box is clickable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.about-link:hover .about-col {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Add a stronger shadow on hover */
+}
+
+
+nav .fa{
+    display: none;
+
+}
+
+
+@media(max-weight: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    
+    }.nav-links ul li{
+        display: block;
+
+    }
+    .nav-links{
+        position: absolute;
+        background: #62bd88;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+
+    }
+    nav .fa{
+        display: block;
+        color: black;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+
+    }
+    .nav-links ul{
+        padding: 30px;
+    
+    }
+
+} 
+
+.footer {
+    color: white; /* Text color */
+    text-align: center; /* Center-align text */
+    padding: 10px 0; /* Spacing above and below text */ 
+    position: fixed; /* Make it fixed at the bottom */
+    bottom: 0; /* Position at the bottom */
+    width: 100%; /* Stretch the footer to full width */
+    font-size: 18px; /* Font size for the text */
+    font-family: "Roboto", sans-serif; /* Ensure font matches the site theme */
+    z-index: 1000; /* Keep it above other elements */
+}
+
+
+
+
+
+
+
+
+
+

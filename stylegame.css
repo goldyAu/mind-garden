@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box; /* Include borders and padding in width calculations */
+}
+#bg-video {
+    position: fixed; /* Ensures the video stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire viewport */
+    z-index: -1; /* Keeps the video behind all content */
+}
+/* General reset */
+body {
+    margin: 0;
+    padding: 0;
+    height: auto; /* Allow the body to grow based on content */
+    overflow-x: hidden; /* Prevent horizontal scrolling only */
+    font-family: "Ariel", sans-serif;
+}
+
+.main-header {
+    background: transparent; /* Transparent background */
+    color: #fff; /* Ensure text remains visible */
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Keeps shadow effect */
+    border: 3px solid #a6d6f1; /* Light green border */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+
+.main-header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%; /* Ensures the container spans full width */
+    max-width: 1200px; /* Restrict max width */
+    margin: auto;
+    padding: 0 0px; /* Add padding to prevent content from touching the edges */
+}
+
+.grid-box {
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.box-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.box-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.box-title {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.box-description {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 8px;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%; /* Ensure header spans full width */
+    background-image: url(images2/gamepage2.jpg); /* Use the uploaded file */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+.footer {
+    color: white; /* Text color */
+    text-align: center; /* Center-align text */
+    padding: 10px 0; /* Spacing above and below text */ 
+    background: none; /* Remove background color entirely */
+    width: 100%; /* Stretch the footer to full width */
+    font-size: 18px; /* Font size for the text */
+    font-family: "Roboto", sans-serif; /* Matches the site theme */
+    position: relative; /* Footer positioned relative to its parent */
+    
+}
+
+/* Navigation Bar */
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #83afe7;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #1574e0;
+}
+  
